@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="TfF-Sv-Kx5">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Experience-->
+        <scene sceneID="aCp-PF-Ibp">
+            <objects>
+                <viewController id="TfF-Sv-Kx5" customClass="MapViewController" customModule="SprintChallenge" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Sa9-SI-YDu">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="aod-a6-Ujo">
+                                <rect key="frame" x="0.0" y="44" width="414" height="808"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kW8-6u-cjA">
+                                <rect key="frame" x="341.5" y="812" width="52.5" height="30"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="kW8-6u-cjA" secondAttribute="height" multiplier="79:45" id="uTR-sn-Yw6"/>
+                                </constraints>
+                                <state key="normal" title="Post">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="postButtonPressed:" destination="TfF-Sv-Kx5" eventType="touchUpInside" id="nnP-bb-4td"/>
+                                    <segue destination="j0j-ac-2hf" kind="show" identifier="PostViewController" id="pIL-iP-Dpw"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="kW8-6u-cjA" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="sEw-g0-xyV" secondAttribute="leading" symbolic="YES" id="37w-9m-w59"/>
+                            <constraint firstItem="aod-a6-Ujo" firstAttribute="top" secondItem="sEw-g0-xyV" secondAttribute="top" id="9BS-XN-qYr"/>
+                            <constraint firstItem="sEw-g0-xyV" firstAttribute="trailing" secondItem="aod-a6-Ujo" secondAttribute="trailing" id="E0U-Jn-bn4"/>
+                            <constraint firstItem="sEw-g0-xyV" firstAttribute="bottom" secondItem="kW8-6u-cjA" secondAttribute="bottom" constant="20" id="V9a-6O-mZ8"/>
+                            <constraint firstItem="aod-a6-Ujo" firstAttribute="leading" secondItem="sEw-g0-xyV" secondAttribute="leading" id="Yqq-kU-XpC"/>
+                            <constraint firstItem="sEw-g0-xyV" firstAttribute="trailing" secondItem="kW8-6u-cjA" secondAttribute="trailing" constant="20" id="hiL-Uf-RCS"/>
+                            <constraint firstItem="aod-a6-Ujo" firstAttribute="centerY" secondItem="Sa9-SI-YDu" secondAttribute="centerY" id="msN-PR-Hsw"/>
+                            <constraint firstItem="aod-a6-Ujo" firstAttribute="centerX" secondItem="Sa9-SI-YDu" secondAttribute="centerX" id="qwp-cb-YMz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="sEw-g0-xyV"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Experience" id="MlQ-np-y2e"/>
+                    <connections>
+                        <outlet property="mapview" destination="aod-a6-Ujo" id="wJY-ra-pGU"/>
+                        <outlet property="postButton" destination="kW8-6u-cjA" id="8qB-Ts-ABK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="39z-k9-YGZ" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1138" y="139"/>
+        </scene>
+        <!--New Experience-->
+        <scene sceneID="5Ll-pP-h1U">
+            <objects>
+                <viewController id="j0j-ac-2hf" customClass="PostViewController" customModule="SprintChallenge" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="W5A-fD-2xR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" largeTitles="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QSW-jH-ZXQ">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="YHf-wy-K7c"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="New Experience" id="doK-xZ-Xxv">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="rXN-tn-vXT">
+                                            <connections>
+                                                <action selector="back:" destination="j0j-ac-2hf" id="RRG-rb-hVo"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ssi-uN-sk2">
+                                <rect key="frame" x="8" y="52" width="398" height="303"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lJn-NT-Zaf">
+                                        <rect key="frame" x="0.0" y="0.0" width="398" height="30"/>
+                                        <color key="backgroundColor" red="0.96862745100000003" green="0.98823529409999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wVz-RH-BW7">
+                                        <rect key="frame" x="0.0" y="38" width="398" height="189"/>
+                                        <color key="backgroundColor" red="0.96862745100000003" green="0.98823529409999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="wVz-RH-BW7" secondAttribute="height" multiplier="398:189" id="nQB-eL-YGx"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kyx-wI-tQn">
+                                        <rect key="frame" x="0.0" y="235" width="398" height="30"/>
+                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Add Image">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="addImageButtonPressed:" destination="j0j-ac-2hf" eventType="touchUpInside" id="3jH-ve-C94"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="752" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n74-Of-Td8">
+                                        <rect key="frame" x="0.0" y="273" width="398" height="30"/>
+                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Record">
+                                            <color key="titleColor" red="0.9510807966" green="0.9510807966" blue="0.9510807966" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="recordButtonPressed:" destination="j0j-ac-2hf" eventType="touchUpInside" id="Bme-F9-Enf"/>
+                                            <segue destination="HC5-Vg-Ti7" kind="popoverPresentation" identifier="CameraViewController" popoverAnchorView="n74-Of-Td8" id="t4J-mk-XBh">
+                                                <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                            </segue>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ssi-uN-sk2" secondAttribute="height" multiplier="398:303" id="EHA-7W-xWq"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="QSW-jH-ZXQ" firstAttribute="centerX" secondItem="ssi-uN-sk2" secondAttribute="centerX" id="Ckd-tT-D19"/>
+                            <constraint firstItem="ssi-uN-sk2" firstAttribute="leading" secondItem="ZZu-CS-tIO" secondAttribute="leading" constant="8" id="I8F-fE-bzf"/>
+                            <constraint firstItem="ZZu-CS-tIO" firstAttribute="trailing" secondItem="ssi-uN-sk2" secondAttribute="trailing" constant="8" id="LAQ-xH-ZE8"/>
+                            <constraint firstItem="QSW-jH-ZXQ" firstAttribute="leading" secondItem="W5A-fD-2xR" secondAttribute="leading" id="LqH-42-T4R"/>
+                            <constraint firstItem="ssi-uN-sk2" firstAttribute="top" secondItem="QSW-jH-ZXQ" secondAttribute="bottom" constant="8" id="iQK-ta-o1f"/>
+                            <constraint firstItem="QSW-jH-ZXQ" firstAttribute="top" secondItem="ZZu-CS-tIO" secondAttribute="top" id="ySg-Lw-tey"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ZZu-CS-tIO"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="New Experience" id="RkP-QL-nUF"/>
+                    <connections>
+                        <outlet property="imageView" destination="wVz-RH-BW7" id="vwo-z9-qCV"/>
+                        <outlet property="recordButton" destination="n74-Of-Td8" id="UfJ-kB-hqs"/>
+                        <outlet property="titleTextField" destination="lJn-NT-Zaf" id="61h-AK-RwO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xS1-h7-xO6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1945" y="139"/>
+        </scene>
+        <!--Camera View Controller-->
+        <scene sceneID="l4V-Hy-aOs">
+            <objects>
+                <viewController id="HC5-Vg-Ti7" customClass="CameraViewController" customModule="SprintChallenge" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OCI-OQ-5Av" customClass="CameraPreviewView" customModule="SprintChallenge" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9BU-GK-7jl">
+                                <rect key="frame" x="149" y="676" width="116" height="116"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="9BU-GK-7jl" secondAttribute="height" multiplier="1:1" id="Zcg-FW-cWC"/>
+                                </constraints>
+                                <color key="tintColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" backgroundImage="Record-1"/>
+                                <state key="selected" image="Stop-1"/>
+                                <connections>
+                                    <action selector="recordButtonPressed:" destination="HC5-Vg-Ti7" eventType="touchUpInside" id="bPy-y5-qBJ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="43Y-p0-GK1" firstAttribute="bottom" secondItem="9BU-GK-7jl" secondAttribute="bottom" constant="16" id="dQy-Hu-zja"/>
+                            <constraint firstItem="9BU-GK-7jl" firstAttribute="centerX" secondItem="OCI-OQ-5Av" secondAttribute="centerX" id="y3F-o7-URZ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="43Y-p0-GK1"/>
+                    </view>
+                    <connections>
+                        <outlet property="cameraView" destination="OCI-OQ-5Av" id="2xD-gw-Ohx"/>
+                        <outlet property="recordButton" destination="9BU-GK-7jl" id="uy6-aO-DBg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T8P-GC-eCl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2758" y="139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Record-1" width="116" height="116"/>
+        <image name="Stop-1" width="116" height="116"/>
+    </resources>
+</document>
